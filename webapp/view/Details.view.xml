@@ -5,10 +5,32 @@
 
     <Page id="idMainPage" title="{i18n>title}">
             <content>
-                <Button id="idCreateFlightWelcome" text="{i18n>createFlight}" press="onPress" />
-                <Button id="idBookFlight" text="{i18n>bookFlight}" press="onPress" />
-                <Button id="idupdateFlight" text="{i18n>updateFlight}" press="onPress" />
-                <Button id="idDeleteFlight" text="{i18n>deleteFlight}" press="onPress" />
+
+    <HBox class = "HeaderButtons    " >
+    <Button id="idCreateFlightWelcome"
+            icon="sap-icon://add"
+            tooltip="{i18n>createFlight}"
+            press="onPress"
+            class="buttonLeftCurve" />
+
+    <Button id="idBookFlight"
+            icon="sap-icon://flight"
+            tooltip="{i18n>bookFlight}"
+            press="onPress"
+            class="buttonMiddle" />
+
+    <Button id="idupdateFlight"
+            icon="sap-icon://edit"
+            tooltip="{i18n>updateFlight}"
+            press="onPress"
+            class="buttonMiddle" />
+
+    <Button id="idDeleteFlight"
+            icon="sap-icon://delete"
+            tooltip="{i18n>deleteFlight}"
+            press="onPress"
+            class="buttonRightCurve" />
+    </HBox>
 
             <Table id="idFlightTable" items="{/flights}">
                 <columns>

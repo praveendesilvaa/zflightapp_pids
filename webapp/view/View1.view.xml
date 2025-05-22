@@ -1,7 +1,14 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     controllerName="zflightapppids.zflightapppids.controller.view1">
-    <Page title="Home Page">
+   <Page showHeader="true" showNavButton="false" class="HomeTitle" headerContent="">
+        <customHeader>
+        <Toolbar>
+            <ToolbarSpacer />
+            <Title text="Home Page" />
+            <ToolbarSpacer />
+        </Toolbar>
+        </customHeader>
         <content>
             <HBox
                 width="100%"
@@ -9,9 +16,9 @@
                 justifyContent="Center"
                 alignItems="Center"
                 renderType="Bare">
-                <Button id="idCreateFlight" text="Create Flights" press="navToCreateFlight" class="myCustomButton"/>
-                <Button id="idDisplayFlights" text="Display Flights" press="navToDisplayFlight" class="myDisplayButton"/>
-                <Button id="idUpdateFlights" text="Update Flights" press="onPress" class="myCustomButton"/>
+                <Button id="idCreateFlight" text="Create Flights" press="navToCreateFlight" class="myFirstButton"/>
+                <Button id="idDisplayFlights" text="Display Flights" press="navToDisplayFlight" class="myMiddleButton"/>
+                <Button id="idUpdateFlights" text="Update Flights" press="onPress" class="myLastButton"/>
             </HBox>
         </content>
     </Page>

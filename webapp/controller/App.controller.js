@@ -4,7 +4,8 @@ sap.ui.define([
   "use strict";
 
   return BaseController.extend("zflightapppids.zflightapppids.controller.App", {
-      onInit() {
+      onInit() { 
+        
       }
   });
 });

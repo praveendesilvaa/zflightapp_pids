@@ -16,6 +16,7 @@ sap.ui.define([
     navToDisplayFlight(){
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteToDisplayFlight");
-        }    
+        }
+            
     });
 });

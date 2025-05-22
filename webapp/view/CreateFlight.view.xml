@@ -3,8 +3,8 @@
     controllerName="zflightapppids.zflightapppids.controller.CreateFlight">
     <Page title="Create Flight">
         <content>
-            <Label text="" style="height: 116px; display: block;" /> 
-            <VBox height="60%"
+            <!-- <Label text="" style="height: 116px; display: block;" /> 
+            <VBox class="flightCreateVBox" height="60%"
                 margin="10% 10% 10% 10%">
                 <Label text="Flight ID" />
                 <Input id="idFlightID" />
@@ -17,7 +17,7 @@
                 <Label text="Return" />
                 <Input id="idReturn" />
 
-            </VBox>
+            </VBox> -->
             <HBox
                     width="100%"
                     height="10%"
@@ -26,7 +26,41 @@
                     renderType="Bare">
                 <Button id="idCreateFlightButton" text="Create Flight" press="onCreateFlightPress" />  
                 <Button id="idResetFlightCreation" text="Reset" press="onResetFlightPress" />  
-            </HBox>
+            </HBox> 
+            <Table
+                id="idCreateFlightTable"
+                inset="false"
+                mode="None"
+                width="auto">
+                <columns>
+                <Column>
+                        <Text text="Flight ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="From"/>
+                    </Column>
+                    <Column>
+                        <Text text="To"/>
+                    </Column>
+                    <Column>
+                        <Text text="Depart"/>
+                    </Column>
+                    <Column>
+                        <Text text="Return"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input id="idFlightID" class = "inputFlightID"/>
+                            <Input id="idFrom" class = "inputFrom"/>
+                            <Input id="idTo" class = "inputTo" />
+                            <Input id="idDepart" class = "inputDepart"/>
+                            <Input id="idReturn" class = "inputReturn"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+                            </Table>
         </content>
     </Page>
 </mvc:View>

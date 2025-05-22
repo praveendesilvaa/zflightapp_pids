@@ -4,7 +4,7 @@ sap.ui.define([
     "use strict";
     return Controller.extend("zflightapppids.zflightapppids.controller.CreateFlight", {
         onInit: function () {
-            // Optional: logic for this view
+    jQuery.sap.includeStyleSheet("css/style.css");
         }
     });
 });
