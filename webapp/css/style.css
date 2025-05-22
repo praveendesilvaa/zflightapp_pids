@@ -1,1 +1,15 @@
-/* Enter your custom styles here */
+.myCustomButton {
+    background-color: #fdfdfd;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    min-width: 150px;
+    min-height: 48px;
+}
+
+.HBOX {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   

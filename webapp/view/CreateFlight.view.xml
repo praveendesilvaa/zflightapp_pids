@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="zflightapppids.zflightapppids.controller.CreateFlight">
+    <Page title="Create Flight">
+        <content>
+            <Text text="Welcome to the Create Flight Page!" />
+        </content>
+    </Page>
+</mvc:View>

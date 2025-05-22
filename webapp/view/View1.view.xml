@@ -1,6 +1,45 @@
 <mvc:View controllerName="zflightapppids.zflightapppids.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page id="idMainPage" title="{i18n>title}">
+            <content>
+                <Button id="idCreateFlight" text="{i18n>createFlight}" press="onPress" />
+                <Button id="idBookFlight" text="{i18n>bookFlight}" press="onPress" />
+                <Button id="idupdateFlight" text="{i18n>updateFlight}" press="onPress" />
+                <Button id="idDeleteFlight" text="{i18n>deleteFlight}" press="onPress" />
+
+            <Table id="idFlightTable" items="{/flights}">
+                <columns>
+                    <Column>
+                        <Text text="Flight ID" />
+                    </Column>
+                    <Column>
+                        <Text text="From" />
+                    </Column>
+                    <Column>
+                        <Text text="To" />
+                    </Column>
+                    <Column>
+                        <Text text="Depart" />
+                    </Column>
+                    <Column>
+                        <Text text="Return" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{FlightID}" />
+                            <Text text="{From}" />
+                            <Text text="{To}" />
+                            <Text text="{Depart}" />
+                            <Text text="{Return}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            </content>
     </Page>
 </mvc:View>
