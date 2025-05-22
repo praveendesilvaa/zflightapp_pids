@@ -1,45 +1,18 @@
-<mvc:View controllerName="zflightapppids.zflightapppids.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
-
-    <Page id="idMainPage" title="{i18n>title}">
-            <content>
-                <Button id="idCreateFlight" text="{i18n>createFlight}" press="onPress" />
-                <Button id="idBookFlight" text="{i18n>bookFlight}" press="onPress" />
-                <Button id="idupdateFlight" text="{i18n>updateFlight}" press="onPress" />
-                <Button id="idDeleteFlight" text="{i18n>deleteFlight}" press="onPress" />
-
-            <Table id="idFlightTable" items="{/flights}">
-                <columns>
-                    <Column>
-                        <Text text="Flight ID" />
-                    </Column>
-                    <Column>
-                        <Text text="From" />
-                    </Column>
-                    <Column>
-                        <Text text="To" />
-                    </Column>
-                    <Column>
-                        <Text text="Depart" />
-                    </Column>
-                    <Column>
-                        <Text text="Return" />
-                    </Column>
-                </columns>
-                <items>
-                    <ColumnListItem>
-                        <cells>
-                            <Text text="{FlightID}" />
-                            <Text text="{From}" />
-                            <Text text="{To}" />
-                            <Text text="{Depart}" />
-                            <Text text="{Return}" />
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
-            </content>
+    controllerName="zflightapppids.zflightapppids.controller.view1">
+    <Page title="Home Page">
+        <content>
+            <HBox
+                width="100%"
+                height="100%"
+                justifyContent="Center"
+                alignItems="Center"
+                renderType="Bare">
+                <Button id="idCreateFlight" text="Create Flights" press="navToCreateFlight" class="myCustomButton"/>
+                <Button id="idDisplayFlights" text="Display Flights" press="navToDisplayFlight" class="myDisplayButton"/>
+                <Button id="idUpdateFlights" text="Update Flights" press="onPress" class="myCustomButton"/>
+            </HBox>
+        </content>
     </Page>
 </mvc:View>

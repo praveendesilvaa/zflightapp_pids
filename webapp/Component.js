@@ -24,9 +24,5 @@ sap.ui.define([
             this.getRouter().initialize();
         }
 
-//         init: function () {
-//             UIComponent.prototype.init.apply(this, arguments);
-//             this.getRouter().initialize();
-// }
     });
 });

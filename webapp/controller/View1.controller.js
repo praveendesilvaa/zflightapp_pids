@@ -3,18 +3,19 @@ sap.ui.define([
 ], (Controller) => {
     "use strict";
 
-    return Controller.extend("zflightapppids.zflightapppids.controller.View1", {
+    return Controller.extend("zflightapppids.zflightapppids.controller.view1", {
         onInit() {
     jQuery.sap.includeStyleSheet("css/style.css");
         },
 
-onPress: function (oEvent) {
-    var sButtonId = oEvent.getSource().getId();
-    if (sButtonId.includes("idCreateFlight")) {
-        this.getOwnerComponent().getRouter().navTo("RouteCreateFlight"); // Use the correct route name
-    } else {
-        MessageToast.show("Button was pressed");
-    }
-}
+    navToCreateFlight(){
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteCreateFlight");
+        },
+
+    navToDisplayFlight(){
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteToDisplayFlight");
+        }    
     });
 });

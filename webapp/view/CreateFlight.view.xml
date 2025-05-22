@@ -3,7 +3,30 @@
     controllerName="zflightapppids.zflightapppids.controller.CreateFlight">
     <Page title="Create Flight">
         <content>
-            <Text text="Welcome to the Create Flight Page!" />
+            <Label text="" style="height: 116px; display: block;" /> 
+            <VBox height="60%"
+                margin="10% 10% 10% 10%">
+                <Label text="Flight ID" />
+                <Input id="idFlightID" />
+                <Label text="From" />
+                <Input id="idFrom" />
+                <Label text="To" />
+                <Input id="idTo" />
+                <Label text="Depart" />
+                <Input id="idDepart" />
+                <Label text="Return" />
+                <Input id="idReturn" />
+
+            </VBox>
+            <HBox
+                    width="100%"
+                    height="10%"
+                    justifyContent="Center"
+                    alignItems="Center"
+                    renderType="Bare">
+                <Button id="idCreateFlightButton" text="Create Flight" press="onCreateFlightPress" />  
+                <Button id="idResetFlightCreation" text="Reset" press="onResetFlightPress" />  
+            </HBox>
         </content>
     </Page>
 </mvc:View>

@@ -3,13 +3,23 @@
     color: #fff;
     border-radius: 0px;
     font-size: 1.2rem;
-    padding: 0.75rem 2rem;
-    min-width: 150px;
-    min-height: 48px;
+    padding: 0rem 0rem;
+    min-width: 250px;
+    min-height: 00px;
 }
 
-.HBOX {
+.Hbox {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }   
+
+.myDisplayButton {
+    background-color: #fdfdfd;
+    color: #2dde91;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    padding: 0rem 0rem;
+    min-width: 250px;
+    min-height: 00px;
+}

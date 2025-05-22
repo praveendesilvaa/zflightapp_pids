@@ -76,80 +76,72 @@
         }
       ]
     },
-"routing": {
-  "config": {
-    "routerClass": "sap.m.routing.Router",
-    "controlAggregation": "pages",
-    "controlId": "app",
-    "transition": "slide",
-    "type": "View",
-    "viewType": "XML",
-    "path": "zflightapppids.zflightapppids.view",
-    "async": true,
-    "viewPath": "zflightapppids.zflightapppids.view"
-  },
-  "routes": [
-  {
-    "name": "RouteWelcomeScreen",
-    "pattern": "",
-    "target": [
-      "TargetWelcomeScreen"
-    ]
-  },
-  {
-    "name": "RouteView1",
-    "pattern": "View1",
-    "target": [
-      "TargetView1"
-    ]
-  },
-    {
-      "name": "RouteCreateFlight",
-      "pattern": "CreateFlight",
-      "target": "TargetCreateFlight"
-    }
-  ],
-  "targets": {
-        "TargetWelcomeScreen": {
-    "viewName": "WelcomeScreen",
-    "viewId": "WelcomeScreen"
-  },
-    "TargetView1": {
-      "viewName": "View1",
-      "viewId": "View1"
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "zflightapppids.zflightapppids.view",
+        "async": true,
+        "viewPath": "zflightapppids.zflightapppids.view"
+      },
+      "routes": [
+        {
+          "name": "RouteView1",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView1"
+          ]
+        },
+        {
+          "name": "RouteCreateFlight",
+          "pattern": "CreateFlight",
+          "target": [
+            "TargetCreateFlight"
+          ]
+        },
+      {
+          "name": "RouteMainPage",
+          "pattern": "NavToMain",
+          "target": [
+            "TargetMainPage"
+          ]
+        },
+        {
+          "name": "RouteToDisplayFlight",
+          "pattern": "NavtoDisplay",
+          "target": [
+            "TargetNavToDisplay"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView1": {
+          "id": "View1",
+          "name": "View1"
+        },
+        "TargetCreateFlight": {
+          "id": "CreateFlight",
+          "name": "CreateFlight"
+        } ,
+        "TargettoMainPage": {
+          "id": "MainPage",
+          "name": "MainPage"
+        }, 
+        "TargetNavToDisplay": {
+          "id": "Details",
+          "name": "Details"
+        }
+      }
     },
-    "TargetCreateFlight": {
-      "viewName": "CreateFlight",
-      "viewId": "CreateFlight"
+    "rootView": {
+      "viewName": "zflightapppids.zflightapppids.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
     }
-  },
-  "rootView": {
-    "viewName": "zflightapppids.zflightapppids.view.App",
-    "type": "XML",
-    "id": "App",
-    "async": true
   }
-},
-  "targets": {
-    "TargetWelcomeScreen": {
-    "viewName": "WelcomeScreen",
-    "viewId": "WelcomeScreen"
-  },
-    "TargetView1": {
-      "viewName": "View1",
-      "viewId": "View1"
-    },
-    "TargetCreateFlight": {
-      "viewName": "CreateFlight",
-      "viewId": "CreateFlight"
-    }
-  },
-  "rootView": {
-    "viewName": "zflightapppids.zflightapppids.view.App",
-    "type": "XML",
-    "id": "App",
-    "async": true
-  }
-} 
 }
-
